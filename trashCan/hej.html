@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<article>
+    <h2>Enter your info here:</h2>
+    <p> Special new user thingy!, enter your race to get 5-15% of today! </p>
+
+    <form action=""  id="register-form" method="get" onsubmit="showInfo();">
+
+        <label for="fname">First and last name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="firstname" value=""><br>
+
+        <label for="lemail">Email:</label><br>
+        <input type="email" id="lemail" name="lemail" placeholder="E-mail" value="">
+
+        <input type="submit" value="Send me my stuff!(place order)">
+
+        <p id="answerWhenSubmitForm"></p>
+    </form>
+
+    <script type="text/javascript">
+        function showInfo(){
+            console.log(name + planet + email + sum + gender);
+            var sum = sessionStorage.getItem("totalSum").value;
+            var form = document.getElementById('register-form');
+
+            form.addEventListener('submit', (e) => {
+                var name = document.getElementById("fname").value;
+                var planet = document.getElementById("lplanet").value;
+                var email = document.getElementById("lemail").value;
+
+                console.log("showInfo function");
+                window.alert("Ok" + name + " from " + planet +
+                    ". We send your products NOW! :D" + " for the total price of:" +
+                    sum + "well send a recite to your email @:" + email);
+            });
+        }
+    </script>
+</article>
+</body>
+</html>

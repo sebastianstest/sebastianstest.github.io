@@ -1,0 +1,8 @@
+.onRow{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    outline: none;
+    border: 0;
+    border: none;
+}
